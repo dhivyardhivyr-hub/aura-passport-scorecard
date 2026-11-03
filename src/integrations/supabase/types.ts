@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      aura_results: {
+        Row: {
+          aura_points: number
+          chaos: number
+          created_at: string
+          display_name: string
+          hustle: number
+          id: string
+          rank_title: string
+          rizz: number
+          roast: string
+        }
+        Insert: {
+          aura_points: number
+          chaos: number
+          created_at?: string
+          display_name: string
+          hustle: number
+          id?: string
+          rank_title: string
+          rizz: number
+          roast: string
+        }
+        Update: {
+          aura_points?: number
+          chaos?: number
+          created_at?: string
+          display_name?: string
+          hustle?: number
+          id?: string
+          rank_title?: string
+          rizz?: number
+          roast?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
