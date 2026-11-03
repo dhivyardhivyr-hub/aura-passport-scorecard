@@ -1,5 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
+import { createClient } from "@supabase/supabase-js";
 import { generateResponse, type GatewayError } from "@lovable.dev/ai-gateway";
 import type { Database } from "@/integrations/supabase/types";
 import {
@@ -17,8 +18,6 @@ type AuraResultRow = Database["public"]["Tables"]["aura_results"]["Row"];
  * strip the default Authorization bearer.
  */
 function getPublicClient() {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const { createClient } = require("@supabase/supabase-js") as typeof import("@supabase/supabase-js");
   const key = process.env["SUPABASE_PUBLISHABLE_KEY"]!;
   return createClient<Database>(process.env["SUPABASE_URL"]!, key, {
     auth: { persistSession: false, autoRefreshToken: false, storage: undefined },
