@@ -6,11 +6,22 @@ export interface AuraStats {
   rankTitle: string;
 }
 
+export interface AuraSource {
+  platform: string;
+  url: string;
+  title: string;
+  note: string;
+}
+
 export interface AuraResult extends AuraStats {
   id: string;
   displayName: string;
   roast: string;
   createdAt?: string;
+  /** Real web findings backing the score (live scan) — empty for low signal. */
+  sources: AuraSource[];
+  /** "live" = verified against real web results, "low_signal" = heuristic only. */
+  scanMode: "live" | "low_signal";
 }
 
 export interface LeaderboardRow {
