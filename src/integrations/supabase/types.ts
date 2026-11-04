@@ -25,6 +25,8 @@ export type Database = {
           rank_title: string
           rizz: number
           roast: string
+          scan_mode: string
+          sources: Json
         }
         Insert: {
           aura_points: number
@@ -36,6 +38,8 @@ export type Database = {
           rank_title: string
           rizz: number
           roast: string
+          scan_mode?: string
+          sources?: Json
         }
         Update: {
           aura_points?: number
@@ -47,6 +51,8 @@ export type Database = {
           rank_title?: string
           rizz?: number
           roast?: string
+          scan_mode?: string
+          sources?: Json
         }
         Relationships: []
       }

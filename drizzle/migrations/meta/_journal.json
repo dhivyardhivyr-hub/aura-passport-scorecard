@@ -8,6 +8,13 @@
       "when": 1793722975069,
       "tag": "0000_aura_results",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1793779227780,
+      "tag": "0001_aura_results_real_scan_sources",
+      "breakpoints": true
     }
   ]
 }
